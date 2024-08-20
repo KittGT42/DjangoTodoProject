@@ -4,6 +4,7 @@ from django.db import models
 class ToDoItem(models.Model):
     class Meta:
         verbose_name = 'ToDo Item'
+        ordering = ['id', ]
     title = models.CharField(max_length=250)
     done = models.BooleanField(default=False)
 
